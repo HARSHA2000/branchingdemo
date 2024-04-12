@@ -33,18 +33,18 @@ jobs:
             git config --global user.name "HARSHA2000" 
             git push origin release:main
 
-  pushToRelease:
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/develop'
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+#   pushToRelease:
+#     runs-on: ubuntu-latest
+#     if: github.ref == 'refs/heads/develop'
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
 
-      - name: Push code to release
-        env:
-            GITHUB_TOKEN: ${{ secrets.pat }}
-        run :
-            git config --global user.email "patelharsha2000@gmail.com"
-            git config --global user.name "HARSHA2000" 
-            git push origin develop:release
+#       - name: Push code to release
+#         env:
+#             GITHUB_TOKEN: ${{ secrets.pat }}
+#         run :
+#             git config --global user.email "patelharsha2000@gmail.com"
+#             git config --global user.name "HARSHA2000" 
+#             git push origin develop:release
 
