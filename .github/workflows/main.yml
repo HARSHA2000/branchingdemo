@@ -4,12 +4,13 @@ on:
   push:
     branches:
       - release
+      - develop
 
 jobs:
     
   build:
     runs-on: ubuntu-latest
-
+    if: github.ref == 'refs/heads/release'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
